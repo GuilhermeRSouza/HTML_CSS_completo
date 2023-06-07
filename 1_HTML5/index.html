@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Recursos do HTML5</title>
+</head>
+<body>
+	<!--O head elemento é um contêiner para metadodos (dados sobre dados) e é colocado entre a <html> tag e a <body> tag-->
+	<header>
+		<!--A nav tag define um conjunto de links de navegação-->
+		<nav>
+			<!--A ul tag defie uma lista não ordenada(marcada), a teg também é utilizada junto com <li> para criar lista não ordenadas.-->
+			<ul>
+				<!--A teg define um item de lista, ela também usada por lista ordenadas(<ol>), lista não ordenada(<ul>)e em lista de menu(<menu>)-->
+				<li><a href="#">Home</a></li>
+				<li><a href="#">Produtos</a></li>
+				<li><a href="#">Contato</a></li>			
+			</ul>
+		</nav>
+	</header>
+	<!--o article é uma teg especifica conteúdo independente, Um artigo deve fazer sentido por si só e deve ser possível distribuí-lo independentemente do resto do site.-->
+<article>
+	<h1>Recursos do HTMl5</h1>
+	<div>
+		<!--tag video, a teg width é utilizada para largura, height é para a altura, controls utilizada para áudio/vídeo -->
+		<video width="320" height="240" controls>
+			<!--src especifica a URL da imagem, type especifica o tipo de <input>-->
+			<source src="video/cidade.mp4" type="video/mp4">
+		</video>		 
+	</div>
+	<div>
+		<!--controls utilizada para áudio/vídeo -->
+		<audio controls>
+            <!--src especifica a URL da imagem, type especifica o tipo de <input>-->
+            <source src="audio/music.mp3" type="audio/mpeg">
+		</audio>
+	</div>
+	<div>
+         <!--figure é uma imagem, ilustração, diagrama, trecho de código-->
+         <figure>
+			<!--src especifica a URL, alt utilizada para os buscadores -->
+             <img src="img/ricefield.jpg" alt="Campo de arroz">
+			 <!--figcapition é uma tag para colocar legenda-->
+			 <figcaption>Um lindo campo de arroz...</figcaption>
+		 </figure>
+	</div>
+	<div>
+		<h3>Preencha o formulário para receber novidades!</h3>
+		<!--a tag form é usada para criar um formulario HTML para entrada do usuário-->
+		<form>
+			<!--Input é uma tag especifica um campo de entrada onde o usuário pode inserir dados-->
+			<!--Required especifica que um campo de entrada deve ser preenchido antex do envio do formulario-->
+			<!--O placeholder é um atributo que especifica uma pequena dica que descreve o valor esperado de um campo de entrada-->
+			<!--Quando presente o autofocus, especifca que elemento deve obter foco automaticamente quando a página for carregada-->
+			<label>E-mail:</label>
+			<input type="email" name="email" required placeholder="Digite seu melhor e-mail
+			" autofocus>
+			<label>Nome:</label>
+			<input type="text" name="name" required placeholder="Digite seu nome completo">
+			<input type="submit" name="Enviar">
+		</form>
+	</div>
+	<div>
+		<!--O contentiditable atributo especifica se o conteúdo de um elemento é editável ou não-->
+		<p contenteditable="true">Este é um paragráfo que pode ser editado.</p>
+	 </div>
+</article>
+    <aside>
+      <p>Confira os nossos produtos, <a href="#">Clicando aqui!</a></p>
+	<!--A footer tag define um rodapé para um documento ou se  -->
+    </aside>
+	<!--detail tag geralmente é usada para criar um windget interativo que o usuário pode abrir e fechar. 
+		 Por padrão, o widget está fechado.Quando aberto, ele se expande e exibe o conteúdo dentro dele-->
+	<details open="open">
+		<!--a tag summary define um cabeçalho visível para o elemento <detail>. 
+		O título pode ser clicadopara visualizar/ocultar os detalhes-->
+		<summary>Cachorro</summary>
+		<!--tag p define um paragrafo--> 
+		<p>É um mamífero de 4 patas e também é um animal doméstico.</p>		
+	</details>
+	 <details>
+		<summary>Gato</summary>
+		<p> É um mamífero de 4 patas e também é animal doméstico.</p>
+	 </details>
+	 <form>
+		<p>Animais</p>
+		<input list="animais" name="animal">
+		<!--a tag datalisttag é usada para fornecer um recurso de "preenchimento automático" para elementos <input>.
+		 Os usuários verão uma lista suspensa de opções predefinidas à medida que inserem os dados-->
+		<datalist id="animais">
+			<option value="Cachorro"></option>
+			<option value="Gato"></option>
+			<option value="Cavalo"></option>
+			<option value="Elevante"></option>
+		</datalist>
+	 </form>
+	 <p>Barra de loading:</p>
+	 <!--a tag progress representa o progresso de conclusão de uma tarefa.-->
+	 <progress value="63" max="100">
+	<footer>
+		<p>Rodapé</p>
+	</footer>
+</body>
+</html>
