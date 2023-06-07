@@ -11,10 +11,3 @@
 ### Tags utilizadas ao longo do curso e suas aplicações
 
 ## 1.tag video
-
-```html5
-<video width="320" height="240" controls>
-  <source src="video/cidade.mp4" type="video/mp4">
-</video>
-
-```
