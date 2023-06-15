@@ -1,13 +1,328 @@
+/*Animations*/
+/*@keyframes especifica o codigo da animação*/
 @keyframes  animacao {
-	from{background-color: red;}
-	to{background-color: yellow;}
-	
+	from {background-color: red;}
+	to {background-color: yellow;}
+}
+
+@keyframes animacao2 {
+	0% {}
+	30% {width: 100px;}
+	60% {background-color: red;}
+	80% {left:  100px; background-color: blue;}
+	100% {height: 100px;}
+}
+
+@keyframes animacao3 {
+	from {left: 0;}
+	to{left: 200px; background-color: green;}	
+}
+
+@keyframes animacao4 {
+	from {left: 0;}
+	to {left: 500px;}
+}
+
+@keyframes animacao5 {
+	0% {left: 0px;}
+	25% {left: 20px; background-color: blue;}
+	60% {left: 100px; background-color: orange;}
+	100% {left: 50px; background-color: red;}
 }
 
 .animation-div {
+	/*width define a largura de um elemento*/
+	width: 100px;
+	/*height define a altura de um elemento*/
+	height: 100px;
+	/*background-color especifica a cor de fundo de um elemento*/
+	background-color: red;
+	/*animation-name especifica o nome da animação @keyframes*/
+	animation-name: animacao;
+    /*animation-duration especifica se uma animação deve ser reproduzida para frente, para trás ou em ciclos alternados*/
+	animation-duration: 5s;
+}
+
+.animation-div2 {
+    width: 200px;
+	height: 200px;
+	background-color: black;
+	animation-name: animacao2;
+	animation-duration: 5s; 
+	/*especifica o tipo de método de posicionamento usado para um elemento (estático, relativo, absoluto ou fixo)*/
+	position: relative;
+}
+
+/*animation delay e iteration*/
+.animation-div3 {
 	width: 100px;
 	height: 100px;
+	background-color: purple;
+	position: relative;
+	animation-name: animacao3;
+	/*Especifica quanto tempo uma animação deve levar para completar um ciclo*/
+	animation-duration: 3s;
+	/*Especifica um atraso para o início de uma animação*/
+	animation-delay: 1s;
+	/*Especifica o número de vezes que uma animação deve ser reproduzida*/
+	animation-iteration-count:infinite;
+}
+
+/*timing function Especifica a curva de velocidade de uma animação*/
+.box {
+	background-color: orange;
+	width: 50px;
+	height: 50px;
+	position: relative;
+	animation-name: animacao4;
+	animation-duration: 4s;
+	animation-iteration-count: infinite ;
+}
+
+#animation-div4 {
+	/*Especifica a curva de velocidade de uma animação. linear: a animação tem a mesma velocidade do inicio ao fim*/
+	animation-timing-function: linear;
+}
+
+#animation-div5 {
+	/*Especifica a curva de velocidade de uma animação. 
+	  ease: Valor padrão. A animação tem um início lento, depois rápido, antes de terminar lentamente */
+    animation-timing-function: ease;
+}
+
+#animation-div6 {
+	/*Especifica a curva de velocidade de uma animação. ease-in: A animação tem um início lento*/
+	animation-timing-function: ease-in;
+}
+
+#animation-div7 {
+	/*Especifica a curva de velocidade de uma animação. ease-out: A animação tem um final lento*/
+    animation-timing-function: ease-out;
+}
+
+#animation-div8{
+	/*Especifica a curva de velocidade de uma animação. ease-in-out: A animação tem um início lento e um final lento*/
+	animation-timing-function: ease-in-out;
+}
+
+/* shorthand - nome, duração, timing-function, delay, iteration */
+
+#animation-div9 {
+	background-color: darkblue;
+	width: 50px;
+	height: 50px;
+	position: relative;
+	/*A propriedade animation é uma propriedade abreviada para:*/
+	/*animation-name: Especifica o nome do quadro-chave que você deseja vincular ao seletor*/
+	/*animation-duration: Especifica o nome do quadro-chave que você deseja vincular ao seletor */
+	/*animation-timing-function: Especifica a curva de velocidade da animação*/
+	/*animation-delay: Especifica um atraso antes que a animação comece */
+	/*animation-iteration-count: Especifica quantas vezes uma animação deve ser reproduzida*/
+	animation: animacao5 8s ease-out 4s infinite;
+}
+
+/* transition */
+/*Uma propriedade abreviada para todas as propriedades de transição*/
+.btn {
+	/*Especifica como um determinado elemento HTML deve ser exibido*/
+	display: block;
+	position: relative;
+	/*Uma propriedade abreviada para todas as propriedades padding-*/
+	padding: 10px;
+	/*Define a margem inferior de um elemento*/
+	margin-bottom: 25px;
+	width: 150px;
+	height: 75px;
+	color: #FFF;
+	text-transform: uppercase;
+	background-color: #333;
+	/*A propriedade border é uma propriedade abreviada para: largura da borda,estilo de borda (obrigatório),Cor da borda */
+	border: 1px solid #333;
+	/*A propriedade cursor especifica o cursor do mouse a ser exibido ao apontar sobre um elemento.*/
+	cursor: pointer;
+	/*Especifica o alinhamento horizontal do texto*/
+	text-align: center;
+	transition: 1s;
+}
+/*hover é usado para selecionar elementos quando você passa o mouse sobre eles.*/
+.btn:hover {
+	color: #333;
+	background-color: #FFF;
+}
+
+.transition {
+	width: 50px;
+	height: 100px;
 	background-color: red;
-	animation-name: animacao;
-	animation-duration: 5s;
+	transition:  4s;
+}
+/*As transições CSS permitem que você altere os valores de propriedade suavemente 
+(de um valor para outro), durante um determinado período*/
+.transition:hover {
+	width: 300px;
+}
+
+/*calc*/
+/*A função calc() executa um cálculo para ser usado como o valor da propriedade.*/
+.div-calc {
+   height: 250px;
+   width: 500px;
+   position: relative;
+   margin: 20px;
+   background-color: #DDD;
+   border: 1px solid red;
+}
+
+.innerdiv-calc {
+	height: 50px;
+	margin: 10px;
+	position: relative;
+	background-color: red;
+}
+
+/*A função calc() executa um cálculo para ser usado como o valor da propriedade.*/
+.calc1{
+	width: calc(50% + 50px);
+}
+
+.calc2{
+	width: calc(50% - 50px);
+}
+
+.calc3 {
+	width: calc(50% * 2);
+	margin:0%;
+}
+
+.calc4 {
+	width: calc(50% / 2);
+}
+
+/* gradient-box */
+
+.gradient-box{
+	width: 500px;
+	height: 200px;
+	position: relative;
+	margin: 20px;
+}
+
+/*Os gradientes CSS permitem exibir transições suaves entre duas ou mais cores especificadas.*/
+/*Para criar um gradiente linear, você deve definir pelo menos duas paradas de cor. 
+Interrupções de cores são as cores entre as quais você deseja renderizar transições suaves. 
+Você também pode definir um ponto inicial e uma direção (ou um ângulo) junto com o efeito de gradiente.*/
+
+/*Gradientes lineares (desce/cima/esquerda/direita/diagonalmente)*/
+
+.gradient1{
+	/*O exemplo a seguir mostra um gradiente linear que começa no topo. Começa roxo, passando para o azul:*/
+	background-image: linear-gradient(purple, blue);
+}
+
+.gradient2{
+	/*O exemplo a seguir mostra um gradiente linear que começa da esquerda. Começa roxo, passando para azul:*/
+	background-image: linear-gradient(to right, purple, blue);
+}
+
+.gradient3{
+	/*O exemplo a seguir mostra um gradiente linear que começa da direita. Começa vermelho, passando para amarelo:*/
+	background-image: linear-gradient(to left, red, yellow);
+}
+
+.gradient4{
+	/*O exemplo a seguir mostra um gradiente linear que começa de baixo para cima. Começa vermelho, passando para o amarelo*/
+	background-image: linear-gradient(to top, red, yellow);
+}
+
+.gradient5{
+	/*O exemplo a seguir mostra um gradiente linear que começa no canto superior direito (e vai para o canto inferior esquerdo).
+	 Começa roxo, passando para o azul:*/
+	background-image: linear-gradient(to top right, purple, blue);
+}
+
+.gradient6{
+	/*O exemplo a seguir mostra um gradiente linear (de cima para baixo) com várias paradas de cor:*/
+	background-image: linear-gradient(red, green, blue);
+}
+
+.gradient7{
+	/*O exemplo a seguir mostra a utilização de exadecimal*/
+	background-image: linear-gradient(#FFF, #CCC, #000);
+}
+
+/*Um gradiente radial é definido por seu centro.*/
+
+.gradient8{
+	/* exemplo a seguir mostra um gradiente radial com limites de cores uniformemente espaçados:*/
+	background-image: radial-gradient(#3A3042, #DB9D47, #FF784F);
+}
+
+.gradient9{
+	/*O exemplo a seguir mostra um gradiente radial com paradas de cor espaçadas de forma diferente:*/
+	background-image: radial-gradient(#3A3042 10%, #DB9D47 30%, #FF784F);
+}
+
+.gradient10 {
+	/*O exemplo a seguir mostra um gradiente radial com a forma de um círculo*/
+	background-image: radial-gradient(circle, #3A3042 10%, #DB9D47 30%, #FF784F);
+}
+  
+/* font face*/
+/*Especifique uma fonte chamada "lage Grafica" e especifique a URL onde ela pode ser encontrada:*/
+@font-face {
+	font-family: "lage Grafica";
+	src: url(fonts/lage_grafica.ttf);
+}
+
+.fontface {
+	font-family: "Lage Grafica";
+}
+
+/* media query */
+
+/*O uso de consultas de mídia é uma técnica popular para fornecer uma folha de estilo personalizada (web design responsivo) 
+para desktops, laptops, tablets e telefones celulares*/
+.mediaquery {
+	height: 200px;
+	width:  1200px;
+	background-color: red;
+}
+
+/*A regra @media é usada em consultas de mídia para aplicar estilos diferentes para diferentes tipos/dispositivos de mídias*/
+@media (max-width: 1000px){
+	.mediaquery {
+		width:  500px;
+		background-color: blue;
+	}
+}
+
+@media (max-width: 768px){
+	.mediaquery{
+		width: 300px;
+		background-color: green;
+	}
+}
+
+/* border radius */
+
+.div-border {
+	width:  100px;
+	height: 100px;
+	background-color: purple;
+	margin: 20px;
+}
+
+/*A propriedade border-radius define o raio dos cantos do elemento.*/
+.border-radius1 {
+	border-radius: 10px;
+}
+
+.border-radius2{
+	border-radius: 50%;
+}
+
+.border-radius3 {
+	border-top-right-radius: 20px;
+	border-bottom-left-radius: 40px;
+
 }
